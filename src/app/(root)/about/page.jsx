@@ -1,13 +1,14 @@
 import AboutContents from '@/components/AboutContents';
+import Container from '@/components/common/Container';
 import React from 'react';
 
 const AboutPage = () => {
     return (
-        <div className=''>
+        <Container className=''>
             <h3>About page</h3>
             <br />
             <AboutContents />
-        </div>
+        </Container>
     );
 };
 

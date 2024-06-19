@@ -17,7 +17,7 @@ const Navbar = () => {
     return (
         <nav className="w-full bg-gradient-to-b from-zinc-200 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit bg-gray-50 shadow-md">
             <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4">
-                <Link className="text-2xl text-white font-semibold bg-gradient-to-r from-blue-600 to-rose-600 py-2 px-3 rounded-md" href="/">
+                <Link className="text-xl text-white font-semibold bg-gradient-to-r from-blue-600 to-rose-600 py-2 px-3 rounded-md" href="/">
                     Next Hero
                 </Link>
                 <div className="flex items-center space-x-4">
@@ -31,11 +31,9 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                    <Btn>
-                        <button >
-                            Sign in
-                        </button>
-                    </Btn>
+                    <button className="border border-blue-700 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded">
+                        Sign In
+                    </button>
                 </div>
             </div>
         </nav>
