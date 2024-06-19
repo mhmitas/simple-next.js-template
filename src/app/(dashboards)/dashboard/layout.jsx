@@ -18,7 +18,7 @@ export default DashboardLayout;
 
 const DashboardNavbar = () => {
     return (
-        <nav className="dark:bg-gray-900 bg-gray-700 text-white py-2 px-4 flex justify-between items-center">
+        <nav className="dark:bg-gray-900 bg-gray-700 text-white py-3 px-4 flex justify-between items-center">
             <Link className="text-xl text-white font-semibold bg-gradient-to-r from-blue-600 to-rose-600 py-2 px-3 rounded-md" href="/">
                 Next Hero
             </Link>
