@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = () => {
     return (
-        <div className="bg-gray-800 text-white w-64 h-screen p-4">
+        <div className="bg-gray-800 text-white w-52 md:w-64 h-screen p-4">
             <h1 className="text-2xl font-bold mb-8">Dashboard</h1>
             <ul>
                 <li className="mb-4">
