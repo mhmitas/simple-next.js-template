@@ -1,21 +1,11 @@
-'use client'
 import Container from '@/components/common/Container';
-import React, { useEffect, useState } from 'react';
+import { fetchBlog } from '@/services/blogApi';
 
-const BlogDetailPage = ({ params }) => {
+const BlogDetailPage = async ({ params }) => {
     console.log(params.blogId);
-    const [blog, setBlog] = useState({})
-    useEffect(() => {
-        fetch('/blogs.json')
-            .then(res => res.json())
-            .then(data => {
-                console.log(params.blogId);
-                const id = params.blogId
-                const blog = data.find(blog => blog.id == id)
-                setBlog(blog);
-            })
 
-    }, [params])
+    const blog = await fetchBlog(params.blogId)
+
     return (
         <Container>
             <div className='bg-gradient-to-r dark:from-blue-400 from-blue-600 dark:to-rose-400 to-rose-600 text-transparent bg-clip-text'>
@@ -23,8 +13,8 @@ const BlogDetailPage = ({ params }) => {
             </div>
             <br />
             <div>
-                <p className='text-xl font-semibold mb-1'>{blog?.description}</p>
-                <p>{blog?.blog}</p>
+                <p className='text-xl font-semibold mb-1'>{blog?.description || blog?.body}</p>
+                <p>{blog?.blog || blog?.body}</p>
             </div>
         </Container>
     );
