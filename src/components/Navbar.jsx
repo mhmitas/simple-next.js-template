@@ -31,7 +31,7 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                    <button className="border border-blue-700 hover:bg-blue-700 hover:text-white font-semibold py-1 px-2 rounded">
+                    <button className="border border-primary hover:bg-primary hover:text-white font-semibold py-1 px-2 rounded">
                         Sign In
                     </button>
                 </div>
