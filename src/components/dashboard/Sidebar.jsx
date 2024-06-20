@@ -1,23 +1,27 @@
-import React from 'react';
+'use client'
+import { SidebarContext } from '@/app/(dashboards)/dashboard/layout';
+import Link from 'next/link';
+import React, { useContext } from 'react';
 
 const Sidebar = () => {
+    const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext)
+
+    function handleOverlayClick(e) {
+        if (e.target === e.currentTarget) {
+            setIsSidebarOpen(false)
+        }
+    }
+
     return (
-        <div className="bg-base-200 w-52 md:w-64 h-screen">
-            <div className='fixed overflow-x-auto h-screen w-52 md:w-64 p-4'>
-                <h1 className="text-2xl font-bold mb-3">Dashboard</h1>
+        <aside onClick={handleOverlayClick} className={`${isSidebarOpen && 'fixed md:static bg-black bg-opacity-50 inset-0'} md:fixed md:w-56`}>
+            <div className={`fixed ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} w-56 bg-base-100 h-screen duration-200 md:translate-x-0`}>
                 <ul className='menu text-lg'>
-                    <li className="mb-4">
-                        <a href="#" className="block p-2 rounded">Home</a>
-                    </li>
-                    <li className="mb-4">
-                        <a href="#" className="block p-2 rounded">Profile</a>
-                    </li>
-                    <li className="mb-4">
-                        <a href="#" className="block p-2 rounded">Settings</a>
-                    </li>
+                    <li><Link href={'#'}>Home</Link></li>
+                    <li><Link href={'#'}>Profile</Link></li>
+                    <li><Link href={'#'}>Settings</Link></li>
                 </ul>
             </div>
-        </div>
+        </aside>
     );
 };
 

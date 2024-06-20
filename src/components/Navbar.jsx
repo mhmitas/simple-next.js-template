@@ -15,7 +15,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="w-full shadow-md">
+        <nav className="w-full shadow-md bg-base-100">
             <div className="mx-auto flex items-center justify-between py-3 px-4">
                 <Link className="text-xl text-white font-semibold bg-gradient-to-r from-blue-600 to-rose-600 py-2 px-3 rounded-md" href="/">
                     Next Hero
