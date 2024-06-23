@@ -26,9 +26,15 @@ module.exports = {
           'base-content': 'black',
         }, // primary: 3b82f6; secondary: a3e635
         darkTheme: {
-          "primary": "#3b82f6",
-          "secondary": "#fff",
-          "accent": "#37cdbe",
+           "primary": "#3b82f6",
+          "primary-focus": "#2779bd",
+          "primary-content": "#ffffff",
+          "secondary": "#ffed4a",
+          "secondary-focus": "#f9d002",
+          "secondary-content": "#ffffff",
+          "accent": "#38c172",
+          "accent-focus": "#2d995b",
+          "accent-content": "#ffffff",
           "base-100": "#1d1e1f",
           "base-200": "#121212",
           "base-300": "#101010",
